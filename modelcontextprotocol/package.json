@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "description": "Pipedream stdio and HTTP MCP servers",
   "scripts": {
     "dev:stdio": "bun --watch src/stdio.ts",
@@ -6,12 +7,39 @@
     "prod:http": "tsx src/http.ts",
     "dev:sse": "pnpm run dev:http",
     "prod:sse": "pnpm run prod:http"
+=======
+  "name": "@insly/mcp",
+  "version": "0.0.1",
+  "description": "MCP servers",
+  "type": "module",
+  "bin": {
+    "@pipedream/mcp": "./dist/src/cli.js"
+  },
+  "scripts": {
+    "dev:stdio": "tsx watch src/stdio.ts",
+    "start": "start:sse:prod",
+    "dev:sse": "tsx watch src/sse.ts",
+    "start:stdio": "tsx src/cli.ts stdio",
+    "start:sse": "tsx src/cli.ts sse",
+    "start:stdio:app": "tsx src/cli.ts stdio --app",
+    "start:sse:app": "tsx src/cli.ts sse --app",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "start:stdio:prod": "node dist/src/cli.js stdio",
+    "start:sse:prod": "node dist/src/cli.js sse"
+>>>>>>> 20ae1f54a (Refactor code structure for improved readability and maintainability)
   },
   "type": "module",
   "dependencies": {
+<<<<<<< HEAD
     "@modelcontextprotocol/sdk": "^1.10.2",
     "@pipedream/sdk": "^1.5.4",
     "@supabase/supabase-js": "^2.49.1",
+=======
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "@pipedream/sdk": "^1.5.0",
+    "commander": "^13.1.0",
+>>>>>>> 20ae1f54a (Refactor code structure for improved readability and maintainability)
     "cors": "^2.8.5",
     "dd-trace": "^3.58.0",
     "express": "^4.21.2",
